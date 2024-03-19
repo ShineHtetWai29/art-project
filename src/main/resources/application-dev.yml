@@ -1,12 +1,13 @@
 spring:
   datasource:
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://localhost:1433;databaseName=ART_DB;encrypt=true;trustServerCertificate=true;
-    username: sa
-    password: root
+    url: jdbc:h2:mem:final_DB
+    driver-class-name: org.h2.Driver
   jpa:
-    show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
+  h2:
+    console:
+      enabled: true
 
 
